@@ -30,7 +30,7 @@ Craft CMS 4 Webdevelopment Environment
 
           yarn install
 
--   Setup Craft CMS + install all Plugins in web container
+-   Setup Craft CMS + install all Plugins in web container. Use credentials provided from ```ddev describe```
 
         php craft setup
         sh craft-plugins.sh
@@ -44,8 +44,23 @@ Craft CMS 4 Webdevelopment Environment
 -   add this to .env
     ENVIRONMENT=dev
 
--   finaly run in web container
+-   finally run
 
-        yarn dev
+        ddev yarn dev
+
 
 ## Vite
+https://vitejs.dev
+
+-   for development:
+
+        ddev yarn dev
+
+-   to create a static build:
+
+        ddev yarn build
+
+## Critical CSS
+
+Critical CSS can be inlined to prevent [FUOC](https://en.wikipedia.org/wiki/Flash_of_unstyled_content)
+add pages that should have inline styles in ```vite.config.js``` in the ```critical``` section. see [here](https://github.com/nystudio107/rollup-plugin-critical) for details.
