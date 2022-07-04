@@ -9,10 +9,6 @@ Craft CMS 4 Webdevelopment Environment
 
 ## Setup
 
--   create ddev project environment
-
-          ddev config
-
 -   start ddev and get all important config infos
 
         ddev start

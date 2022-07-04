@@ -111,3 +111,4 @@ dist
 /storage/logs
 /storage/runtime
 /config/project
+/.ddev/config.yaml
