@@ -1,0 +1,37 @@
+$black: rgba(0,0,0,1);
+$white: rgba(255,255,255,1);
+//------------------------------------\\
+// SUSY GRID
+//------------------------------------\\
+$susy: (
+    columns: 12,
+    gutters: 0.3,
+    math: fluid,
+    gutter-position: after,
+    container-position: center,
+    debug: (image: hide, color: rgba(0,255,0,0.30), output: background, toggle: top right,)
+);
+
+.o-wrapper {
+    //@include clearfix;
+    position: relative;
+    @include container(90%);
+}
+
+//------------------------------------\\
+// COLORS
+//------------------------------------\\
+//------------------------------------\\
+// TYPOGRAPHY
+//------------------------------------\\
+// Standard line-height from Standard font
+$standardLineHeighS: 15px;
+$standardLineHeightM: 20px;
+$standardLineHeightL: 25px;
+$standardLineHeightXL: 25px; // Hyphenation
+
+// Breakpoints
+//------------------------------------\\
+$bpS: 768px;
+$bpM: 1224px;
+$bpL: 1440px;

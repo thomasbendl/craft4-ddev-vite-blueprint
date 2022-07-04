@@ -1,0 +1,54 @@
+{
+	"name": "craft4-ddev-vite-blueprint",
+	"version": "1.0.0",
+	"description": "Craft CMS 4 + DDEV + Vite Blueprint",
+	"main": "vite.config.js",
+	"scripts": {
+		"dev": "node emptyDistDir.js && node viteDevServerToggle.js 1 && vite --host",
+		"build": "node viteDevServerToggle.js 0 && vite build"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/thomasbendl/craft4-ddev-vite-blueprint.git"
+	},
+	"author": "@thomasbendl, @smonist",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/thomasbendl/craft4-ddev-vite-blueprint/issues"
+	},
+	"homepage": "https://github.com/thomasbendl/craft4-ddev-vite-blueprint#readme",
+	"devDependencies": {
+		"@vitejs/plugin-legacy": "^1.6.3",
+		"autoprefixer": "^10.4.0",
+		"postcss": "^8.3.11",
+		"postcss-aspect-ratio-property": "^1.0.0",
+		"postcss-load-config": "^3.1.0",
+		"fs-extra": "^10.0.0",
+		"prettier": "2.5.0",
+		"regenerator-runtime": "^0.13.9",
+		"rollup-plugin-critical": "^1.0.8",
+		"sass": "^1.43.4",
+		"vite": "^2.6.0",
+		"vite-plugin-compression": "^0.3.6",
+		"vite-plugin-live-reload": "^2.1.0"
+	},
+	"dependencies": {
+		"@barba/core": "^2.9.7",
+		"breakpoint-sass": "^2.7.1",
+		"gsap": "^3.8.0",
+		"normalize-scss": "^7.0.1",
+		"susy": "2.2.14",
+		"canvas-confetti": "^1.5.1"
+	},
+	"browserslist": {
+		"production": [
+			"defaults"
+		],
+		"development": [
+			"last 1 chrome version",
+			"last 1 firefox version",
+			"last 1 safari version",
+			"last 1 ie version"
+		]
+	}
+}

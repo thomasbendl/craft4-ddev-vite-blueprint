@@ -1,0 +1,165 @@
+@mixin optimize-legibility {
+    text-rendering: optimizeLegibility;
+}
+
+@mixin font-smoothing {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+@mixin reset {
+    margin: 0;
+    padding: 0;
+}
+
+@mixin clearfix {
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+
+
+@mixin verticalRythm ($faktor:1,$top:false,$bottom:true) {
+    @if $top == true {
+        margin-top: $standardLineHeighS * $faktor;
+        @include breakpoint($bpS) {
+            margin-top: $standardLineHeighS * $faktor;
+        };
+        @include breakpoint($bpM) {
+            margin-top: $standardLineHeightM * $faktor;
+        };
+        @include breakpoint($bpL) {
+            margin-top: $standardLineHeightL * $faktor;
+        };
+
+    }
+    @if $bottom == true {
+        margin-bottom: $standardLineHeighS * $faktor;
+        @include breakpoint($bpS) {
+            margin-bottom: $standardLineHeighS * $faktor;
+        }
+        @include breakpoint($bpM) {
+            margin-bottom: $standardLineHeightM * $faktor;
+        }
+        @include breakpoint($bpL) {
+            margin-bottom: $standardLineHeightL * $faktor;
+        }
+
+    }
+}
+@mixin verticalPaddingRythm ($faktor:1,$top:false,$bottom:false) {
+    @if $top == true {
+        padding-top: $standardLineHeighS * $faktor;
+        @include breakpoint($bpS) {
+            padding-top: $standardLineHeighS * $faktor;
+        };
+        @include breakpoint($bpM) {
+            padding-top: $standardLineHeightM * $faktor;
+        };
+        @include breakpoint($bpL) {
+            padding-top: $standardLineHeightL * $faktor;
+        };
+
+    }
+    @if $bottom == true {
+        padding-bottom: $standardLineHeighS * $faktor;
+        @include breakpoint($bpS) {
+            padding-bottom: $standardLineHeighS * $faktor;
+        };
+        @include breakpoint($bpM) {
+            padding-bottom: $standardLineHeightM * $faktor;
+        };
+        @include breakpoint($bpL) {
+            padding-bottom: $standardLineHeightL * $faktor;
+        };
+
+    }
+}
+
+@mixin fontXLarge($fontfamily:'Helvetica Neue') {
+    font-size: 30px;
+    line-height: 38px;
+    font-family: $fontfamily;
+    @include breakpoint($bpS){
+        font-size: 43px;
+        line-height: 52px;
+    };
+    @include breakpoint($bpM){
+        font-size: 43px;
+        line-height: 52px;
+    };
+
+    @include breakpoint($bpL){
+        font-size: 55px;
+        line-height: 66px;
+
+    };
+}
+
+
+@mixin fontLarge($fontfamily:'Helvetica Neue') {
+    font-size: 20px;
+    line-height: 26px;
+    font-family: $fontfamily;
+    margin-bottom: 0.4em;
+    @include breakpoint($bpS){
+        font-size: 25px;
+        line-height: 38px;
+    };
+    @include breakpoint($bpM){
+        font-size: 30px;
+        line-height: 36px;
+
+    };
+
+    @include breakpoint($bpL){
+        font-size: 34px;
+        line-height: 40px;
+
+    };
+}
+
+@mixin fontMedium($fontfamily:'Helvetica Neue') {
+    font-size: 14px;
+    line-height: 18px;
+    font-family: $fontfamily;
+    margin-bottom: 1em;
+    @include breakpoint($bpS){
+        font-size: 17px;
+        line-height: 25px;
+    };
+    @include breakpoint($bpM){
+        font-size: 20px;
+        line-height: 28px;
+
+    };
+
+    @include breakpoint($bpL){
+        font-size: 24px;
+        line-height: 32px;
+
+    };
+}
+
+
+
+@mixin fontSmall($fontfamily:'Helvetica Neue') {
+    font-size: 12px;
+    line-height: 16px * 1.4;
+    font-family: $fontfamily;
+    @include breakpoint($bpS){
+        font-size: 14px;
+    };
+    @include breakpoint($bpM){
+        font-size: 16px;
+
+    };
+
+    @include breakpoint($bpL){
+        font-size: 17px;
+
+    };
+}

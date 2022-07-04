@@ -1,0 +1,19 @@
+// npm i susy@latest
+@import "susy";
+
+// npm i breakpoint-sass
+@import "breakpoint-sass";
+
+//npm i normalize-scss
+//@import "normalize-scss";
+//@include normalize();
+
+@import "base/config";
+@import "animations/aos-custom";
+@import "helpers/mixins";
+@import "base/fonts";
+@import "base/typography";
+@import "base/page";
+
+@import "modules/modules";
+@import "components/components";

@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="{{ craft.app.language }}">
+<head>
+    <meta charset="utf-8"/>
+    <title>{{ siteName }}</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    {{ craft.vite.includeCriticalCssTags() }}
+    {{ craft.vite.script("src/js/app.ts") }}
+</head>
+<body class="ltr" data-barba="wrapper">
+    {% block content %}
+    {% endblock %}
+</body>
+</html>
