@@ -94,14 +94,14 @@ barba.hooks.once((data) => {
 	gsap.set(".animate", {
 		scale: 2.6,
 		opacity: 0,
-		force3d:false,
+		force3D: false,
 	});
 	gsap.to(".animate", {
 		opacity: 1,
 		delay: 0.5,
 		duration: 0.7,
 		scale: 1,
-		force3d:false,
+		force3D: false,
 		ease: "bounce.out",
 	});
 });
