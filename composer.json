@@ -2,6 +2,7 @@
 	"require": {
 		"craftcms/cms": "^4.0.0.1",
 		"craftcms/redactor": "^3.0",
+		"nystudio107/craft-seomatic": "^4.0",
 		"nystudio107/craft-vite": "^4.0",
 		"vlucas/phpdotenv": "^5.4.0"
 	},
@@ -25,8 +26,25 @@
 		}
 	},
 	"scripts": {
+		"craft-update": [
+			"@pre-craft-update",
+			"@post-craft-update"
+		],
+		"pre-craft-update": [],
+		"post-craft-update": [
+			"@php craft install/check && php craft up --interactive=0 || exit 0",
+			"@php craft install/check && php craft clear-caches/all --interactive=0 || exit 0",
+			"@php craft install/check && php craft invalidate-tags/all --interactive=0 || return 0"
+		],
 		"post-root-package-install": [
 			"@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
-		]
+		],
+		"post-create-project-cmd": [
+			"@php craft setup/welcome"
+		],
+		"pre-update-cmd": "@pre-craft-update",
+		"pre-install-cmd": "@pre-craft-update",
+		"post-update-cmd": "@post-craft-update",
+		"post-install-cmd": "@post-craft-update"
 	}
 }

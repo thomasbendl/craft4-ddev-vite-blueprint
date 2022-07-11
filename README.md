@@ -7,60 +7,34 @@ Craft CMS 4 Webdevelopment Environment
 -   Docker, https://www.docker.com
 -   DDEV, https://ddev.com
 
-## Setup
+## Installing Craft
 
--   create ddev project environment
+To install craft CMS run
 
-          ddev config
+        make install
 
--   start ddev and get all important config infos
+Follow the prompts.
 
-        ddev start
-        ddev describe
+This command will:
 
--   open a bash session in the web container (or other container).
+1.  Start your DDEV project
+2.  Remove GIT Folder
+3.  Install Composer
+4.  Install node packages
+5.  Do a one-time build of Vite
+6.  Generate APP_ID and save to your .env file
+7.  Generate SECURITY_KEY and save to your .env file
+8.  Installing Craft for the first time, allowing you to set the admin's account credentials
+9.  Install all Craft plugins
 
-          ddev ssh
-
--   install Craft CMS 4 on local machine in web container
-
-          composer install
-
--   install all packages in web container
-
-          yarn install
-
--   Setup Craft CMS + install all Plugins in web container. Use credentials provided from ```ddev describe```
-
-        php craft setup
-        sh craft-plugins.sh
-
--   exit web container and launch project
-
-        exit
-        ddev launch
-
--   manually remove the trailing '/' from PRIMARY_SITE_URL in .env
--   add this to .env
-    ENVIRONMENT=dev
-
--   finally run
-
-        ddev yarn dev
-
+Once the process is complete, type ddev launch to open the project in your default browser.
 
 ## Vite
-https://vitejs.dev
 
--   for development:
+### Start Dev Server
 
-        ddev yarn dev
+                make dev
 
--   to create a static build:
+### Make build
 
-        ddev yarn build
-
-## Critical CSS
-
-Critical CSS can be inlined to prevent [FUOC](https://en.wikipedia.org/wiki/Flash_of_unstyled_content)
-add pages that should have inline styles in ```vite.config.js``` in the ```critical``` section. see [here](https://github.com/nystudio107/rollup-plugin-critical) for details.
+                make build
