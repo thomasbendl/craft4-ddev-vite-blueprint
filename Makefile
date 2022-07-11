@@ -18,7 +18,6 @@ install: up build
 	ddev exec php craft plugin/install vite
 up:
 	if [ ! "$$(ddev describe | grep OK)" ]; then \
-	 	rm -rf .git; \
 		ddev start; \
 		ddev composer install; \
 		ddev exec yarn install; \
