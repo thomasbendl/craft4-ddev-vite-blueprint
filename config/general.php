@@ -28,4 +28,15 @@ return [
 
     // Whether crawlers should be allowed to index pages and following links
     'disallowRobots' => !$isProd,
+
+    // https://craftcms.com/docs/3.x/config/config-settings.html#limitautoslugstoascii
+    'limitAutoSlugsToAscii' => true,
+
+    // https://craftcms.com/docs/3.x/config/config-settings.html#convertfilenamestoascii
+    'convertFilenamesToAscii' => true,
+
+    // https://craftcms.com/docs/3.x/config/#aliases
+    'aliases' => [
+        '@web' => App::env('PRIMARY_SITE_URL'),
+    ]
 ];
