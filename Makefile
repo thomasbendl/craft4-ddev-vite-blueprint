@@ -16,6 +16,7 @@ install: up build
 	ddev exec php craft plugin/install redactor
 	ddev exec php craft plugin/install seomatic
 	ddev exec php craft plugin/install vite
+	ddev exec php craft plugin/install blitz
 up:
 	if [ ! "$$(ddev describe | grep OK)" ]; then \
 		ddev start; \
