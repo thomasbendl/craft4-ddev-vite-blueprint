@@ -4,6 +4,7 @@
 		"craftcms/redactor": "^3.0",
 		"nystudio107/craft-seomatic": "^4.0",
 		"nystudio107/craft-vite": "^4.0",
+		"putyourlightson/craft-blitz": "^4.2",
 		"vlucas/phpdotenv": "^5.4.0"
 	},
 	"require-dev": {
