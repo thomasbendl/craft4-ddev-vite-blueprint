@@ -18,7 +18,6 @@ Follow the prompts.
 This command will:
 
 1.  Start your DDEV project
-2.  Remove GIT Folder
 3.  Install Composer
 4.  Install node packages
 5.  Do a one-time build of Vite
