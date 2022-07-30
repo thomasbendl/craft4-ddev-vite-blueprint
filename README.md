@@ -32,8 +32,8 @@ Once the process is complete, type ddev launch to open the project in your defau
 
 ### Start Dev Server
 
-                make dev
+        make dev
 
 ### Make build
 
-                make build
+        make build
