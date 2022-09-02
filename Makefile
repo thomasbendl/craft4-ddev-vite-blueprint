@@ -5,7 +5,6 @@ build: up
 dev: up
 	ddev exec yarn build
 	ddev exec yarn dev
-	ddev launch
 install: up build
 	ddev exec php craft setup/app-id \
 		$(filter-out $@,$(MAKECMDGOALS))
