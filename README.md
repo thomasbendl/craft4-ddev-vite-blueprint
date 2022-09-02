@@ -15,3 +15,10 @@ Combine the power of Craft CMS and Vite.js with zero configuration setup and inc
 
 -   Docker, https://www.docker.com
 -   DDEV, https://ddev.com
+
+
+## Credits
+The team behind the magic ✨ 🪄 🦄
+
+-  https://github.com/thomasbendl
+-  https://github.com/smonist
