@@ -1,4 +1,5 @@
 <?php
+
 /**
  * General Configuration
  *
@@ -37,7 +38,7 @@ return [
 
     // https://craftcms.com/docs/3.x/config/#aliases
     'aliases' => [
-        '@web' => App::env('PRIMARY_SITE_URL'),
-        '@webroot' => dirname(__DIR__) . '/web/',
+        '@web' => rtrim(App::env('PRIMARY_SITE_URL'), '/'),
+        '@webroot' => dirname(__DIR__) . '/web',
     ]
 ];
