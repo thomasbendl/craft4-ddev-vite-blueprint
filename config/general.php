@@ -11,8 +11,8 @@
 
 use craft\helpers\App;
 
-$isDev = App::env('CRAFT_ENVIRONMENT') === 'dev';
-$isProd = App::env('CRAFT_ENVIRONMENT') === 'production';
+$isDev = App::env('CRAFT_ENVIRONMENT') == 'dev';
+$isProd = App::env('CRAFT_ENVIRONMENT') == 'production';
 
 return [
     // Default Week Start Day (0 = Sunday, 1 = Monday...)
