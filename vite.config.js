@@ -16,11 +16,11 @@ export default ({ command }) => ({
 		},
 	},
 	server: {
-		host: '0.0.0.0',
-		port: 3000
+		host: "0.0.0.0",
+		port: 3000,
 	},
 	plugins: [
-		liveReload("./templates/**/*"),
+		liveReload(["./templates/**/*", "./vendor/szenario/**/*"]),
 		legacy({
 			targets: ["defaults"],
 			additionalLegacyPolyfills: ["regenerator-runtime/runtime"],

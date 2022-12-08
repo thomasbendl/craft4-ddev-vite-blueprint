@@ -1,9 +1,8 @@
-.PHONY: build dev up insadmintall
+.PHONY: build dev up install
 
 build: up
 	ddev exec yarn build
 dev: up
-	ddev exec yarn build
 	ddev exec yarn dev
 install: up build
 	ddev exec php craft setup/app-id \

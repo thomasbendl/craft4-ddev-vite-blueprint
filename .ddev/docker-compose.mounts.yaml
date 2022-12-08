@@ -1,0 +1,5 @@
+version: '3.6'
+services:
+  web:
+    volumes:
+      - "$HOME/Development/GitHub/craft-plugins:/var/www/craft-plugins/"

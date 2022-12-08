@@ -1,13 +1,18 @@
 {
 	"require": {
-		"craftcms/cms": "^4.0.0.1",
+		"craftcms/cms": "4.3.1",
 		"craftcms/redactor": "^3.0",
-		"nystudio107/craft-seomatic": "^4.0",
+		"nystudio107/craft-seomatic": "4.0.12",
 		"nystudio107/craft-vite": "^4.0",
-		"putyourlightson/craft-blitz": "^4.2",
+		"putyourlightson/craft-blitz": "4.2.3",
+		"putyourlightson/craft-sherlock": "4.2.0",
+		"shornuk/craft-plausible": "2.0.0",
+		"szenario/craft-spacecontrol": "^0.0.1",
+		"szenario/craft-submariner": "^0.0.2",
 		"vlucas/phpdotenv": "^5.4.0"
 	},
 	"require-dev": {
+		"nystudio107/craft-autocomplete": "^1.10",
 		"yiisoft/yii2-shell": "^2.0.3"
 	},
 	"autoload": {
@@ -26,6 +31,18 @@
 			"php": "8.0.2"
 		}
 	},
+	"minimum-stability": "dev",
+	"prefer-stable": true,
+	"repositories": [
+		{
+			"type": "path",
+			"url": "../craft-plugins/craft-submariner"
+		},
+		{
+			"type": "path",
+			"url": "../craft-plugins/craft-spacecontrol"
+		}
+	],
 	"scripts": {
 		"craft-update": [
 			"@pre-craft-update",
